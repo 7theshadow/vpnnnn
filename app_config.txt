@@ -13,14 +13,8 @@
         "name": "APP_BACKGROUND_TYPE",
         "value": {
             "options": [
-                {
-                    "label": "Imagem",
-                    "value": "IMAGE"
-                },
-                {
-                    "label": "Cor",
-                    "value": "COLOR"
-                }
+                { "label": "Imagem", "value": "IMAGE" },
+                { "label": "Cor", "value": "COLOR" }
             ],
             "selected": "COLOR"
         },
@@ -28,12 +22,12 @@
     },
     {
         "name": "APP_BACKGROUND_COLOR",
-        "value": "#080e16c7",
+        "value": "#06070a",
         "type": "COLOR"
     },
     {
         "name": "APP_CARD_COLOR",
-        "value": "#1d242e73",
+        "value": "#0f1418",
         "type": "COLOR"
     },
     {
@@ -43,7 +37,7 @@
     },
     {
         "name": "APP_CARD_STATUS_COLOR",
-        "value": "#1d242e73",
+        "value": "#0b0f12",
         "type": "COLOR"
     },
     {
@@ -53,52 +47,52 @@
     },
     {
         "name": "APP_CARD_CONFIG_COLOR",
-        "value": "#080e16c7",
+        "value": "#080a0d",
         "type": "COLOR"
     },
     {
         "name": "APP_DIALOG_BACKGROUND_COLOR",
-        "value": "#080e16c7",
+        "value": "#07090c",
         "type": "COLOR"
     },
     {
         "name": "APP_DIALOG_LOGGER_COLOR",
-        "value": "#080e16c7",
+        "value": "#07090c",
         "type": "COLOR"
     },
     {
         "name": "APP_BORDER_COLOR",
-        "value": "#1d242e73",
+        "value": "#182026",
         "type": "COLOR"
     },
     {
         "name": "APP_INPUT_COLOR",
-        "value": "#1d242e73",
+        "value": "#0d1114",
         "type": "COLOR"
     },
     {
         "name": "APP_INPUT_RADIUS",
-        "value": 25,
+        "value": 20,
         "type": "INTEGER"
     },
     {
         "name": "APP_TEXT_COLOR",
-        "value": "#FFFFFFFF",
+        "value": "#E6EEF3",
         "type": "COLOR"
     },
     {
         "name": "APP_BUTTON_COLOR",
-        "value": "#1d242e73",
+        "value": "#14181c",
         "type": "COLOR"
     },
     {
         "name": "APP_BUTTON_RADIUS",
-        "value": 25,
+        "value": 20,
         "type": "INTEGER"
     },
     {
         "name": "APP_ICON_COLOR",
-        "value": "#FFFFFFFF",
+        "value": "#FFFFFF",
         "type": "COLOR"
     },
     {
@@ -138,7 +132,7 @@
     },
     {
         "name": "APP_CONFIG_LOCATION_PERMISSION",
-        "value": false,
+        "value": true,
         "type": "BOOLEAN"
     },
     {
@@ -233,8 +227,7 @@
     },
     {
         "name": "APP_LAYOUT_WEBVIEW",
-        "value": "<!DOCTYPE html>\n<html lang='en'>\n  <head>\n    <meta charset='UTF-8' />\n    <meta http-equiv='X-UA-Compatible' content='IE=edge' />\n    <meta name='viewport' content='width=device-width, initial-scale=1.0' />\n    <title>VP NNNN</title>\n    <!-- Fonts: Cairo for Arabic, Poppins for EN/TR -->\n    <link id='font-cairo' href='https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap' rel='stylesheet' />\n    <link id='font-poppins' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap' rel='stylesheet' />\n    <style>\n      :root{\n        --app-font: 'Poppins', sans-serif;\n      }\n      html,body{height:100%;margin:0;font-family:var(--app-font);background:transparent;color:var(--text-color,#fff)}\n      .top-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(0,0,0,0.15)}\n      .top-left, .top-right{display:flex;align-items:center;gap:10px}\n      .lang-btn{position:relative;display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.04);cursor:pointer}\n      .lang-btn .flag{font-size:18px}\n      .lang-dropdown{position:absolute;right:0;top:calc(100% + 8px);background:var(--card-bg, #1d242e73);border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.3);min-width:170px;padding:6px;display:none;z-index:999}\n      .lang-dropdown.open{display:block}\n      .lang-item{display:flex;align-items:center;gap:10px;padding:8px;border-radius:6px;cursor:pointer}\n      .lang-item:hover{background:rgba(255,255,255,0.03)}\n      .lang-item .mini-flag{width:20px;height:14px;display:inline-block}\n      /* Direction-aware layout */\n      [dir='rtl'] .top-bar{direction:rtl}\n      [dir='ltr'] .top-bar{direction:ltr}\n      /* helpers for content translation (preserve layout) */\n      [data-i18n]{white-space:normal}\n      /* small responsiveness */\n      @media (max-width:480px){.lang-btn{padding:6px 8px}}\n    </style>\n  </head>\n  <body>\n    <div class='top-bar'>\n      <div class='top-left'>\n        <div class='app-logo' aria-hidden='true'>🔒</div>\n        <div class='app-title' data-ar='تطبيق VP' data-en='VP App' data-tr='VP Uygulaması' data-i18n></div>\n      </div>\n      <div class='top-right'>\n        <!-- Language switcher (enabled by APP_BTN_LANGUAGE_ENABLED) -->\n        <div id='lang-container'>\n          <button id='lang-btn' class='lang-btn' aria-haspopup='true' aria-expanded='false'>\n            <span class='flag'>🌐</span>\n            <span id='current-lang-name' style='font-weight:600'>العربية</span>\n          </button>\n          <div id='lang-dropdown' class='lang-dropdown' role='menu' aria-label='language menu'>\n            <div class='lang-item' data-lang='ar' role='menuitem' tabindex='0'>\n              <span class='mini-flag'>🇸🇦</span>\n              <span class='lang-name' data-ar='العربية' data-en='Arabic' data-tr='Arapça'></span>\n            </div>\n            <div class='lang-item' data-lang='en' role='menuitem' tabindex='0'>\n              <span class='mini-flag'>🇺🇸</span>\n              <span class='lang-name' data-ar='الإنجليزية' data-en='English' data-tr='İngilizce'></span>\n            </div>\n            <div class='lang-item' data-lang='tr' role='menuitem' tabindex='0'>\n              <span class='mini-flag'>🇹🇷</span>\n              <span class='lang-name' data-ar='التركية' data-en='Turkish' data-tr='Türkçe'></span>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <main style='padding:16px;'>\n      <h1 data-ar='مرحباً بك' data-en='Welcome' data-tr='Hoşgeldiniz' data-i18n></h1>\n      <p data-ar='هذا نص توضيحي.' data-en='This is a demo text.' data-tr='Bu bir demo metnidir.' data-i18n></p>\n\n      <button id='connect-btn' data-ar='اتصال' data-en='Connect' data-tr='Bağlan' data-i18n></button>\n      <button id='help-btn' data-ar='مساعدة' data-en='Help' data-tr='Yardım' data-i18n></button>\n\n      <!-- example input with data attributes -->\n      <input id='search' placeholder='' data-ar='ابحث...' data-en='Search...' data-tr='Ara...' data-i18n />\n\n    </main>\n\n    <script>\n      (function(){\n        // language utility: 'ar' | 'en' | 'tr'\n        const SUPPORTED = ['ar','en','tr'];\n        const DEFAULT = (function(){\n          try{ const cfg = localStorage.getItem('APP_DEFAULT_LANGUAGE'); if(cfg) return cfg; }catch(e){}\n          return 'ar'; // fallback default if APP_DEFAULT_LANGUAGE not injected\n        })();\n\n        function detectInitial(){\n          try{\n            const stored = localStorage.getItem('lang');\n            if(stored && SUPPORTED.includes(stored)) return stored;\n            // try navigator\n            const nav = (navigator.language||navigator.userLanguage||'en').toLowerCase();\n            if(nav.startsWith('ar')) return 'ar';\n            if(nav.startsWith('tr')) return 'tr';\n            if(nav.startsWith('en')) return 'en';\n            return DEFAULT;\n          }catch(e){return DEFAULT}\n        }\n\n        let current = detectInitial();\n\n        // map language to display name (will be replaced by data attributes too)\n        const LANG_LABEL = {ar:'العربية',en:'English',tr:'Türkçe'};\n\n        // translate all elements that have data-ar/data-en/data-tr\n        function translatePage(lang){\n          current = lang;\n          // direction and font\n          const dir = (lang==='ar') ? 'rtl' : 'ltr';\n          document.documentElement.setAttribute('dir', dir);\n          document.documentElement.lang = (lang==='ar') ? 'ar' : (lang==='tr' ? 'tr' : 'en');\n\n          // font selection\n          if(lang==='ar'){\n            document.documentElement.style.setProperty('--app-font', "'Cairo', sans-serif");\n          }else{\n            document.documentElement.style.setProperty('--app-font', "'Poppins', sans-serif");\n          }\n\n          // translate elements\n          const all = document.querySelectorAll('[data-ar],[data-en],[data-tr],[data-i18n]');\n          all.forEach(el => {\n            const txt = el.getAttribute('data-' + lang) || el.getAttribute('data-en') || '';\n            // if input or textarea, set placeholder when placeholder exists otherwise set value\n            const tag = el.tagName.toLowerCase();\n            if(tag === 'input' || tag === 'textarea'){\n              // if element initially had placeholder attribute (empty allowed), set placeholder\n              if(el.hasAttribute('placeholder') || (!el.value && el.placeholder)){\n                el.placeholder = txt || '';\n              }else{\n                // otherwise set value if appropriate\n                el.value = txt || '';\n              }\n            } else {\n              el.textContent = txt || '';\n            }\n          });\n\n          // update language button label\n          const btnLabel = document.getElementById('current-lang-name');\n          if(btnLabel) btnLabel.textContent = LANG_LABEL[lang] || LANG_LABEL.en;\n\n          // save preference\n          try{ localStorage.setItem('lang', lang); }catch(e){}\n        }\n\n        // init language dropdown behaviour\n        const langBtn = document.getElementById('lang-btn');\n        const dropdown = document.getElementById('lang-dropdown');\n        if(langBtn && dropdown){\n          langBtn.addEventListener('click', function(e){\n            dropdown.classList.toggle('open');\n            langBtn.setAttribute('aria-expanded', dropdown.classList.contains('open'));
-          });\n          // selectable items\n          dropdown.querySelectorAll('.lang-item').forEach(item=>{\n            item.addEventListener('click', ()=>{\n              const l = item.getAttribute('data-lang');\n              if(SUPPORTED.includes(l)){\n                translatePage(l);\n                dropdown.classList.remove('open');\n                langBtn.setAttribute('aria-expanded','false');\n              }\n            });\n            item.addEventListener('keydown', (ev)=>{ if(ev.key === 'Enter' || ev.key === ' ') item.click(); });\n          });\n          // close when clicking outside\n          document.addEventListener('click', (ev)=>{ if(!langBtn.contains(ev.target) && !dropdown.contains(ev.target)) { dropdown.classList.remove('open'); langBtn.setAttribute('aria-expanded','false'); } });\n        }\n\n        // expose a global API to allow other parts of the app to trigger language change\n        window.AppI18n = {\n          setLanguage: function(l){ if(SUPPORTED.includes(l)) translatePage(l); },\n          getLanguage: function(){ return current; },\n          supported: SUPPORTED\n        };\n\n        // initial translate\n        translatePage(current);\n\n        // Observe DOM for newly inserted nodes that may contain data-i18n attributes\n        const obs = new MutationObserver(muts=>{\n          muts.forEach(m=>{\n            m.addedNodes.forEach(node=>{\n              if(node.nodeType===1){ // element\n                if(node.matches('[data-ar],[data-en],[data-tr],[data-i18n]') || node.querySelector('[data-ar],[data-en],[data-tr],[data-i18n]')){\n                  // re-run translation for new subtree\n                  translatePage(current);\n                }\n              }\n            });\n          });\n        });\n        obs.observe(document.body, {childList:true,subtree:true});\n      })();\n    <\/script>\n  <\/body>\n<\/html>",
+        "value": "<!DOCTYPE html>\n<html lang='ar'>\n  <head>\n    <meta charset='UTF-8' />\n    <meta http-equiv='X-UA-Compatible' content='IE=edge' />\n    <meta name='viewport' content='width=device-width, initial-scale=1.0' />\n    <title>تطبيق VP</title>\n    <!-- Cairo font for Arabic, Poppins as fallback -->\n    <link href='https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap' rel='stylesheet' />\n    <style>\n      :root{--app-font:'Cairo', sans-serif;--bg:#06070a;--card:#0f1418;--muted:#9aa6b0;--text:#E6EEF3;--accent:#2b7cff}\n      html,body{height:100%;margin:0;font-family:var(--app-font);background:var(--bg);color:var(--text);direction:rtl}\n      .top-bar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.15));box-shadow:0 2px 8px rgba(0,0,0,0.5)}\n      .top-left, .top-right{display:flex;align-items:center;gap:12px}\n      .app-title{font-weight:700;font-size:16px;color:var(--text)}\n      .lang-btn{position:relative;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);cursor:pointer;border:1px solid rgba(255,255,255,0.03);color:var(--text)}\n      .lang-dropdown{position:absolute;left:0;top:calc(100% + 8px);background:var(--card);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.6);min-width:220px;padding:8px;display:none;z-index:999}\n      .lang-dropdown.open{display:block}\n      .lang-item{display:flex;align-items:center;gap:10px;padding:10px;border-radius:6px;cursor:pointer;color:var(--text)}\n      .lang-item:hover{background:rgba(255,255,255,0.02)}\n      .mini-flag{width:22px;height:14px;display:inline-block}\n      main{padding:20px}\n      .card{background:var(--card);padding:16px;border-radius:12px;color:var(--text);box-shadow:0 6px 18px rgba(0,0,0,0.6)}\n      button.primary{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:10px;font-weight:600}\n      button.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:8px 12px;border-radius:8px}\n      input,textarea{background:var(--input,#0d1114);border:1px solid rgba(255,255,255,0.03);color:var(--text);padding:10px;border-radius:8px}\n      .muted{color:var(--muted)}\n      @media (max-width:480px){.top-bar{padding:10px}.lang-btn{padding:6px 8px}}\n    </style>\n  </head>\n  <body>\n    <div class='top-bar'>\n      <div class='top-left'>\n        <div class='app-logo' aria-hidden='true'>🔒</div>\n        <div class='app-title' data-ar='تطبيق VP' data-en='VP App' data-tr='VP Uygulaması' data-i18n>تطبيق VP</div>\n      </div>\n      <div class='top-right'>\n        <div id='lang-container'>\n          <button id='lang-btn' class='lang-btn' aria-haspopup='true' aria-expanded='false'>\n            <span class='flag'>🌐</span>\n            <span id='current-lang-name' style='font-weight:600'>العربية</span>\n          </button>\n          <div id='lang-dropdown' class='lang-dropdown' role='menu' aria-label='قائمة اللغة'>\n            <div class='lang-item' data-lang='ar' role='menuitem' tabindex='0'>\n              <span class='mini-flag'>🇸🇦</span>\n              <span class='lang-name' data-ar='العربية' data-en='Arabic' data-tr='Arapça'>العربية</span>\n            </div>\n            <div class='lang-item' data-lang='en' role='menuitem' tabindex='0'>\n              <span class='mini-flag'>🇺🇸</span>\n              <span class='lang-name' data-ar='الإنجليزية' data-en='English' data-tr='İngilizce'>الإنجليزية</span>\n            </div>\n            <div class='lang-item' data-lang='tr' role='menuitem' tabindex='0'>\n              <span class='mini-flag'>🇹🇷</span>\n              <span class='lang-name' data-ar='التركية' data-en='Turkish' data-tr='Türkçe'>التركية</span>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <main>\n      <div class='card'>\n        <h1 data-ar='مرحباً بك في تطبيق VP' data-en='Welcome to VP App' data-tr='VP Uygulamasına Hoşgeldiniz' data-i18n>مرحباً بك في تطبيق VP</h1>\n        <p class='muted' data-ar='هذا التطبيق مُحسّن للمستخدمين العرب مع دعم كامل للغات واتجاه النص.' data-en='This app is optimized for Arabic users with full language and direction support.' data-tr='Bu uygulama, dil ve yön desteği ile Arap kullanıcılar için optimize edilmiştir.' data-i18n>هذا التطبيق مُحسّن للمستخدمين العرب مع دعم كامل للغات واتجاه النص.</p>\n\n        <div style='margin-top:12px;display:flex;gap:10px;flex-wrap:wrap'>\n          <button id='connect-btn' class='primary' data-ar='اتصال' data-en='Connect' data-tr='Bağlan' data-i18n>اتصال</button>\n          <button id='help-btn' class='ghost' data-ar='مساعدة' data-en='Help' data-tr='Yardım' data-i18n>مساعدة</button>\n        </div>\n\n        <div style='margin-top:14px'>\n          <input id='search' placeholder='ابحث...' data-ar='ابحث...' data-en='Search...' data-tr='Ara...' data-i18n />\n        </div>\n      </div>\n    </main>\n\n    <script>\n      (function(){\n        const SUPPORTED = ['ar','en','tr'];\n        const DEFAULT = (function(){ try{ const cfg = localStorage.getItem('APP_DEFAULT_LANGUAGE'); if(cfg) return cfg; }catch(e){} return 'ar'; })();\n\n        function detectInitial(){\n          try{ const stored = localStorage.getItem('lang'); if(stored && SUPPORTED.includes(stored)) return stored; const nav = (navigator.language||navigator.userLanguage||'ar').toLowerCase(); if(nav.startsWith('ar')) return 'ar'; if(nav.startsWith('tr')) return 'tr'; if(nav.startsWith('en')) return 'en'; return DEFAULT; }catch(e){return DEFAULT}\n        }\n\n        let current = detectInitial();\n        const LANG_LABEL = {ar:'العربية',en:'English',tr:'Türkçe'};\n\n        function translatePage(lang){\n          current = lang;\n          const dir = (lang==='ar') ? 'rtl' : 'ltr';\n          document.documentElement.setAttribute('dir', dir);\n          document.documentElement.lang = (lang==='ar') ? 'ar' : (lang==='tr' ? 'tr' : 'en');\n          // font switch: Cairo for Arabic, Poppins as fallback\          if(lang==='ar'){ document.documentElement.style.setProperty('--app-font', "'Cairo', sans-serif"); } else { document.documentElement.style.setProperty('--app-font', "'Poppins', sans-serif"); }\n\n          const all = document.querySelectorAll('[data-ar],[data-en],[data-tr],[data-i18n]');\n          all.forEach(el => {\n            const txt = el.getAttribute('data-' + lang) || el.getAttribute('data-en') || '';\n            const tag = el.tagName.toLowerCase();\n            if(tag === 'input' || tag === 'textarea'){ if(el.hasAttribute('placeholder') || (!el.value && el.placeholder)){ el.placeholder = txt || ''; } else { el.value = txt || ''; } } else { el.textContent = txt || ''; }\n          });\n\n          const btnLabel = document.getElementById('current-lang-name'); if(btnLabel) btnLabel.textContent = LANG_LABEL[lang] || LANG_LABEL.en;\n          try{ localStorage.setItem('lang', lang); }catch(e){}\n        }\n\n        const langBtn = document.getElementById('lang-btn');\n        const dropdown = document.getElementById('lang-dropdown');\n        if(langBtn && dropdown){\n          langBtn.addEventListener('click', function(e){ dropdown.classList.toggle('open'); langBtn.setAttribute('aria-expanded', dropdown.classList.contains('open')); });\n          dropdown.querySelectorAll('.lang-item').forEach(item=>{ item.addEventListener('click', ()=>{ const l = item.getAttribute('data-lang'); if(SUPPORTED.includes(l)){ translatePage(l); dropdown.classList.remove('open'); langBtn.setAttribute('aria-expanded','false'); } }); item.addEventListener('keydown', (ev)=>{ if(ev.key === 'Enter' || ev.key === ' ') item.click(); }); });\n          document.addEventListener('click', (ev)=>{ if(!langBtn.contains(ev.target) && !dropdown.contains(ev.target)) { dropdown.classList.remove('open'); langBtn.setAttribute('aria-expanded','false'); } });\n        }\n\n        window.AppI18n = { setLanguage: function(l){ if(SUPPORTED.includes(l)) translatePage(l); }, getLanguage: function(){ return current; }, supported: SUPPORTED };\n\n        translatePage(current);\n\n        const obs = new MutationObserver(muts=>{ muts.forEach(m=>{ m.addedNodes.forEach(node=>{ if(node.nodeType===1){ if(node.matches('[data-ar],[data-en],[data-tr],[data-i18n]') || node.querySelector('[data-ar],[data-en],[data-tr],[data-i18n]')){ translatePage(current); } } }); }); });\n        obs.observe(document.body, {childList:true,subtree:true});\n      })();\n    <\/script>\n  <\/body>\n<\/html>",
         "type": "HTML"
     },
     {
